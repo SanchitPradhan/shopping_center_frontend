@@ -1,0 +1,71 @@
+.drawer-logo {
+  height: 50px;
+  width: 200px;
+}
+
+.appbar-logo {
+  height: 40px;
+  width: 40px;
+}
+
+.home-logo {
+  height: 250px;
+  width: 250px;
+}
+
+.select-mobile {
+  border-radius: 10px;
+  text-decoration: solid;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+  background: linear-gradient(135deg, #45b0fd, #2e6ef8) !important;
+  color: white;
+}
+
+option {
+  background: #45b0fd !important;
+}
+
+option:hover {
+  background: #2e6ef8 !important;
+}
+
+.card-style {
+  border-radius: 20px;
+  transition: 0.4s;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card-style:hover {
+  transform: scale(1.05);
+}
+
+.card-style .accordion .accordion-button {
+  border-radius: 20px !important;
+  border-style: solid;
+  background: linear-gradient(135deg, #45b0fd, #2e6ef8) !important;
+}
+
+.card-style .accordion .accordion-button:focus {
+  box-shadow: none;
+  color: white;
+}
+
+.toolbar {
+  background: linear-gradient(135deg, #45b0fd, #2e6ef8) !important;
+}
+
+.accordion-style {
+  background: linear-gradient(135deg, #45b0fd, #2e6ef8) !important;
+}
+
+.icon-button {
+  color: #2e6ef8;
+}
+
+.home-heading {
+  background: linear-gradient(135deg, #45b0fd, #2e6ef8);
+  background-clip: text;
+  font-weight: bold;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
