@@ -1,5 +1,5 @@
 import React from 'react'
-import { Col, Row } from 'react-bootstrap';
+import { Col, Row, Button } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom'
 
 const ProductDetails = () => {
@@ -15,8 +15,16 @@ const ProductDetails = () => {
             <Row className='m-3'>
                 <Col md={3}>
                     <img src={productData.images[0]} style={{ width: "350px", height: "400px" }} alt={"product"} />
+                    <Row className='product-button-box d-flex justify-content-center text-center mt-3 w-4'>
+                        <Col md={6}>
+                            <Button className='product-addtocart'>Add To Cart</Button>
+                        </Col>
+                        <Col md={6}>
+                            <Button className='product-addtocart'>Buy Now</Button>
+                        </Col>
+                    </Row>
                 </Col>
-                <Col md={8} className='ms-5'>
+                <Col md={8} className='pp-4 ms-5'>
                     <h1><strong>{productData.brand}{" "}{productData.name}</strong></h1>
                     <hr />
                     <div className='mt-4 mb-4'>
@@ -30,8 +38,11 @@ const ProductDetails = () => {
                     </div>
                     <hr />
                     <div>
-
+                        <h5>Description: <br /><br />
+                            {productData.description}
+                        </h5>
                     </div>
+                    
                 </Col>
             </Row>
 

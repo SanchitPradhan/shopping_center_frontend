@@ -21,8 +21,17 @@
   color: white;
 }
 
-option {
-  background: #45b0fd !important;
+.product-button-box {
+  box-shadow: rgb(204, 219, 232) 2px 2px  6px 2px inset, rgba(255, 255, 255, 0.5) -3px -3px  6px 1px inset ;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.product-addtocart {
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+  background: linear-gradient(135deg, #45b0fd, #2e6ef8) !important;
+  color: black !important;
 }
 
 option:hover {

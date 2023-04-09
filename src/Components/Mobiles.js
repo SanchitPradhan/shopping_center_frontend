@@ -1,4 +1,4 @@
-import { Card, Col, Container, Row, Accordion, Spinner } from 'react-bootstrap';
+import { Card, Col, Container, Row, Spinner, Form, FloatingLabel } from 'react-bootstrap';
 import * as React from 'react';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -29,10 +29,6 @@ const Mobiles = () => {
         setMobileBrand(e.target.value);
     }
 
-    // function handleSingleProduct(e) {
-    //     setMobileBrand(e.target.value);
-    // }
-
     useEffect(() => {
 
         mobileData();
@@ -47,8 +43,8 @@ const Mobiles = () => {
 
         <div>
             <Container>
-                <Row className='justify-content-end' style={{ marginRight: "0px" }}>
-                    <Col md={1}>
+                <Row className='d-flex justify-content-end'>
+                    {/* <Col md={1}>
                         <select
                             className='select-mobile m-1 mb-3 p-1 text-center'
                             placeholder='Select Brand'
@@ -62,7 +58,19 @@ const Mobiles = () => {
                             <option value={"OnePlus"}>OnePlus</option>
                             <option value={"Samsung"}>Samsung</option>
                         </select>
+                    </Col> */}
+                    <Col md={3}>
+                        <FloatingLabel label="Brand" className='mb-4'>
+                            <Form.Select value={mobileBrand} onChange={handleMobileBrand}>
+                                <option selected value={"All"}>All Brands</option>
+                                <option value={"Apple"}>Apple</option>
+                                <option value={"Google"}>Google</option>
+                                <option value={"OnePlus"}>OnePlus</option>
+                                <option value={"Samsung"}>Samsung</option>
+                            </Form.Select>
+                        </FloatingLabel>
                     </Col>
+
                 </Row>
                 {loader ? <center><Spinner /></center> : <Row className='justify-content-center d-flex gy-4'>
                     {
@@ -92,14 +100,6 @@ const Mobiles = () => {
                                                     M.R.P. :{" "}
                                                     <strong style={{ color: 'red', textDecoration: 'line-through' }}>₹ {numFormat.format(row.price)}</strong>
                                                 </h5>
-                                                <Accordion className='accordion-style text-left' flush>
-                                                    <Accordion.Item eventKey="0">
-                                                        <Accordion.Header><strong>Description</strong></Accordion.Header>
-                                                        <Accordion.Body>
-                                                            <strong>{row.description}</strong>
-                                                        </Accordion.Body>
-                                                    </Accordion.Item>
-                                                </Accordion>
                                             </Card.Body>
                                         </Card>
 
@@ -127,14 +127,6 @@ const Mobiles = () => {
                                                     M.R.P. :{" "}
                                                     <strong style={{ color: 'red', textDecoration: 'line-through' }}>₹ {numFormat.format(row.price)}</strong>
                                                 </h5>
-                                                <Accordion className='accordion-style text-align-center' flush>
-                                                    <Accordion.Item eventKey="0">
-                                                        <Accordion.Header><strong>Description</strong></Accordion.Header>
-                                                        <Accordion.Body>
-                                                            <strong>{row.description}</strong>
-                                                        </Accordion.Body>
-                                                    </Accordion.Item>
-                                                </Accordion>
                                             </Card.Body>
                                         </Card>
 
