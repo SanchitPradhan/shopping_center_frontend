@@ -26,6 +26,9 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { Button } from 'react-bootstrap';
+import Arrow from '../Images/Arrow.svg';
+import Door from '../Images/Door.svg';
 
 const drawerWidth = 240;
 
@@ -112,7 +115,7 @@ const SideBar = () => {
     return (
         <Box sx={{ display: 'flex' }} style={{ height: '100%' }} >
             <AppBar position="fixed" open={open}>
-                <Toolbar className='toolbar'>
+                <Toolbar className='toolbar justify-content-between'>
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"
@@ -122,6 +125,14 @@ const SideBar = () => {
                     >
                         <img className='appbar-logo' src={appBarLogo} alt={"logo"} />
                     </IconButton>
+                    <Button
+                        className='btn-log'
+                        style={{ color: "black" }}
+                        onClick={() => navigate("/")}>
+                        <img src={Arrow} />
+                        <img src={Door} className='me-2' />
+                        Logout
+                    </Button>
                 </Toolbar>
             </AppBar>
             <div style={{ height: '100vh' }}>

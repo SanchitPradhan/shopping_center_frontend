@@ -22,7 +22,7 @@
 }
 
 .product-button-box {
-  box-shadow: rgb(204, 219, 232) 2px 2px  6px 2px inset, rgba(255, 255, 255, 0.5) -3px -3px  6px 1px inset ;
+  box-shadow: rgb(204, 219, 232) 2px 2px 6px 2px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
   border-radius: 10px;
   padding: 15px;
 }
@@ -34,27 +34,91 @@
   color: black !important;
 }
 
+.product-addtocart:hover {
+  color: white !important;
+}
+
+
+.product-share {
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+  background: linear-gradient(135deg, #45b0fd, #2e6ef8) !important;
+  color: black !important;
+  text-align: center !important;
+}
+
+.product-share:hover {
+  color: white !important;
+}
+
 option:hover {
   background: #2e6ef8 !important;
 }
 
-.card-style {
+.card-style-mobile {
   border-radius: 20px;
   transition: 0.4s;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.card-style:hover {
+.card-style-mobile:hover {
   transform: scale(1.05);
 }
 
-.card-style .accordion .accordion-button {
+.card-style-mobile .accordion .accordion-button {
   border-radius: 20px !important;
   border-style: solid;
   background: linear-gradient(135deg, #45b0fd, #2e6ef8) !important;
 }
 
-.card-style .accordion .accordion-button:focus {
+.card-style-mobile .accordion .accordion-button:focus {
+  box-shadow: none;
+  color: white;
+}
+
+.card-style-book {
+  border-radius: 20px;
+  transition: 0.4s;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  height: 560px !important;
+}
+
+.card-style-book:hover {
+  transform: scale(1.05);
+}
+
+.card-style-book .accordion .accordion-button {
+  border-radius: 20px !important;
+  border-style: solid;
+  background: linear-gradient(135deg, #45b0fd, #2e6ef8) !important;
+}
+
+.card-style-book .accordion .accordion-button:focus {
+  box-shadow: none;
+  color: white;
+}
+
+.card-style-laptop {
+  border-radius: 20px;
+  transition: 0.4s;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.book-details-img {
+  border-radius: 10px;
+}
+
+.card-style-laptop:hover {
+  transform: scale(1.05);
+}
+
+.card-style-laptop .accordion .accordion-button {
+  border-radius: 20px !important;
+  border-style: solid;
+  background: linear-gradient(135deg, #45b0fd, #2e6ef8) !important;
+}
+
+.card-style-laptop .accordion .accordion-button:focus {
   box-shadow: none;
   color: white;
 }
@@ -77,4 +141,113 @@ option:hover {
   font-weight: bold;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.color-button {
+  border-radius: 200px !important;
+  border-color: black !important;
+  border-style: solid !important;
+  height: 50px !important;
+  width: 50px !important;
+}
+
+.column-scroll {
+  overflow-y: scroll;
+  height: 600px;
+}
+
+.column-scroll::-webkit-scrollbar {
+  width: 3px;
+  height: 12px;
+}
+
+.column-scroll::-webkit-scrollbar-track {
+  background-color: #d4d4d4;
+  border-radius: 10px;
+}
+
+.column-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #45b0fd, #2e6ef8);
+  border-radius: 10px;
+}
+
+.column-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: #ffffff77;
+}
+
+.card-style-laptop .card-image-laptop {
+  height: 300px !important;
+  width: 312px !important;
+}
+
+.card-style-book .card-image-book {
+  border-radius: 15px;
+}
+
+.toolbar .btn-log img{
+  transition: 0.3s;
+  width: 17px;
+}
+
+.toolbar .btn-log{
+  border-radius: 10px;
+  padding-bottom: 10px;
+  background: #6dc2ff
+}
+
+.toolbar .btn-log img:nth-child(1){
+  margin-right: -8px;
+  box-shadow: 10px;
+}
+.toolbar .btn-log:hover img:nth-child(1){
+  transform: translateX(-6px);
+  box-shadow: 10px;
+}
+.toolbar .btn-log:hover {
+  background: #6dc2ff
+}
+
+.loginNew {
+  height: 100vh;
+}
+.loginNew .left {
+  background: url(../src/Images/SuperShoopy-Vert.svg) center center no-repeat;
+  background-size: 400px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.loginNew h2 {
+  background: linear-gradient(180deg, #4c4c4c, #000000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+
+.loginNew .right .card {
+  border: 0px;
+  border-radius: 15px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  width: 100%;
+}
+.loginNew .right input {
+  border: none none none none !important;
+  border-color: transparent transparent #363434 transparent !important;
+  border-radius: 0px !important;
+}
+.loginNew .right .input-group-text {
+  border: none none none none !important;
+  border-color: transparent transparent #363434 transparent !important;
+  border-radius: 0px !important;
+  padding: 4px 10px !important;
+  background: transparent;
+  margin-left: -2px;
+}
+
+.loginNew .right input:focus {
+  outline: none;
+  box-shadow: none;
 }
